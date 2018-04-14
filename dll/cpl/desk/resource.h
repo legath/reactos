@@ -13,6 +13,7 @@
 #define IDD_SETTINGS         103
 #define IDD_ADVAPPEARANCE    104
 #define IDD_EFFAPPEARANCE    105
+#define IDD_DESKTOP_GENERAL  106
 #define IDD_ADVANCED_GENERAL 200
 #define IDD_CONFIRMSETTINGS  201
 
@@ -24,6 +25,7 @@
 #define IDC_COLOR_BUTTON             1004
 #define IDC_PLACEMENT_COMBO          1005
 #define IDS_BACKGROUND_COMDLG_FILTER 1006
+#define IDC_DESKTOP_CUSTOM           1007
 
 /* Screensaver Page */
 #define IDC_SCREENS_PREVIEW      1010
@@ -167,6 +169,16 @@
 
 #define IDS_STANDARDEFFECT  3711
 #define IDS_CLEARTYPEEFFECT 3712
+
+/* Desktop Items Dialog */
+#define IDS_DESKTOP_ITEMS    3900
+#define IDC_ICONS_MYDOCS     3901
+#define IDC_ICONS_MYNET      3902
+#define IDC_ICONS_MYCOMP     3903
+#define IDC_ICONS_INTERNET   3904
+#define IDC_ICONS_LISTVIEW   3905
+#define IDC_ICONS_CHANGEICON 3906
+#define IDC_ICONS_SETDEFAULT 3907
 
 /* Advanced General Dialog */
 #define IDC_FONTSIZE_COMBO   5000
