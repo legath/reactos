@@ -122,4 +122,7 @@ HPSXA WINAPI SHCreatePropSheetExtArrayEx(HKEY,LPCWSTR,UINT,IDataObject*);
 INT_PTR CALLBACK
 AdvGeneralPageProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
+INT_PTR CALLBACK
+DesktopPageProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);
+
 #endif /* _DESK_H */
