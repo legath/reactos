@@ -33,7 +33,7 @@ ETH_CFLAGS  = 	-O2 -march=i686 -m32 $(ETH_INCLUDE) -Wstrict-prototypes -fomit-fr
 endif
 
 LDFLAGS-ROM     = -s -S -T $(TOPDIR)/scripts/ldscript-crom.ld
-LDFLAGS-XBEBOOT = -s -S -T $(TOPDIR)/scripts/xbeboot.ld
+LDFLAGS-XBEBOOT = -m elf_i386 -s -S -T $(TOPDIR)/scripts/xbeboot.ld
 LDFLAGS-ROMBOOT = -s -S -T $(TOPDIR)/boot_rom/bootrom.ld
 LDFLAGS-VMLBOOT = -s -S -T $(TOPDIR)/boot_vml/vml_start.ld
 ifeq ($(ETHERBOOT), yes)
@@ -216,4 +216,8 @@ imagecompress: obj/image-crom.bin bin/imagebld
 	bin/imagebld -rom obj/2blimage.bin obj/image-crom.bin.tmp.gz image/image.bin image/image_1024.bin
 	bin/imagebld -xbe xbe/default.xbe obj/image-crom.bin
 	bin/imagebld -vml boot_vml/disk/vmlboot obj/image-crom.bin 
+
+%.o     : %.S
+	${CC} -DASSEMBLER ${CFLAGS} -o $@ -c $<
+
 
