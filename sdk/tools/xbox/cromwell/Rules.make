@@ -9,7 +9,7 @@ EXTRA_CFLAGS += -I$(TOPDIR)/include -I$(TOPDIR)/fs/cdrom -I$(TOPDIR)/drivers/vid
 #
 .PHONY: dummy
 
-CFLAGSBR = -Wall -Werror 
+CFLAGSBR = #-Wall -Werror 
 
 #
 # Special variables which should not be exported

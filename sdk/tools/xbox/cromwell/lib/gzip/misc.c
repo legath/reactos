@@ -29,8 +29,8 @@
  *
  * Incomprehensible are the ways of bootloaders.
  */
-static void* memset(void *, int, size_t);
-static void* memcpy(void *, __const void *, size_t);
+void* memset(void *, int, size_t);
+void* memcpy(void *, __const void *, size_t);
 #define memzero(s, n)     memset ((s), 0, (n))
 
 typedef unsigned char  uch;
@@ -138,7 +138,7 @@ static void gzip_release(void **ptr)
 	free_mem_ptr = (long) *ptr;
 }
  
-static void* memset(void* s, int c, size_t n)
+void* memset(void* s, int c, size_t n)
 {
 	int i;
 	char *ss = (char*)s;
@@ -147,7 +147,7 @@ static void* memset(void* s, int c, size_t n)
 	return s;
 }
 
-static void* memcpy(void* __dest, __const void* __src,
+void* memcpy(void* __dest, __const void* __src,
 			    size_t __n)
 {
 	int i;
