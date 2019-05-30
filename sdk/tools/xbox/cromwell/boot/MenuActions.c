@@ -92,7 +92,7 @@ static void InitNativeIcons(PICONMENU Menu) {
 	if( (ba[0x1fe]==0x55) && (ba[0x1ff]==0xaa) ) {
 		volatile BYTE * pb;
 		int n=0, nPos=0;
-		(volatile BYTE *)pb=&ba[0x1be];
+		pb=(volatile BYTE*)&ba[0x1be];
 		//Check the first four partitions (this isn't good enough!)
 		for (n=0; n<4; n++,pb+=16) {
 			//Is this partition bootable?
